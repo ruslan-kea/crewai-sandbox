@@ -17,10 +17,13 @@ def run():
     """
     Run the crew.
     """
+    inputs = {
+        "project_type": "Todo Application with Real-time Collaboration"
+    }
     try:
-        result = CrewAiSandbox().crew().kickoff()
-        print("Crew execution completed successfully!")
-        print(f"Report generated: {result}")
+        result = CrewAiSandbox().crew().kickoff(inputs=inputs)
+        print("Software Development Crew execution completed successfully!")
+        print(f"Development project documentation generated: {result}")
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
@@ -30,8 +33,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "AI LLMs",
-        'current_year': str(datetime.now().year)
+        "project_type": "Todo Application with Real-time Collaboration"
     }
     try:
         CrewAiSandbox().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -54,8 +56,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "topic": "AI LLMs",
-        "current_year": str(datetime.now().year)
+        "project_type": "Todo Application with Real-time Collaboration"
     }
     
     try:

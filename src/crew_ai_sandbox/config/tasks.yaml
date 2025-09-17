@@ -1,17 +1,99 @@
-research_task:
+requirements_analysis:
   description: >
-    Conduct a comprehensive analysis of the latest advancements in AI Large Language Models (LLMs) in 2024.
-    Focus on breakthrough technologies, new model architectures, performance improvements, and industry applications.
+    Analyze the project requirements and create detailed user stories, acceptance criteria, and feature specifications.
+    Break down the {project_type} project into clear, actionable requirements that the development team can implement.
+    Consider user personas, use cases, and business objectives. Define the MVP scope and prioritize features.
   expected_output: >
-    A detailed list of 10 key findings about recent AI LLM advancements, including specific models, 
-    companies, and technological breakthroughs.
-  agent: researcher
+    A comprehensive requirements document including:
+    - Project overview and objectives
+    - User personas and use cases
+    - Detailed user stories with acceptance criteria
+    - Feature prioritization and MVP scope
+    - Non-functional requirements (performance, security, scalability)
+  agent: product_manager
 
-reporting_task:
+system_architecture:
   description: >
-    Using the research findings, create a comprehensive report about the latest AI LLM advancements.
-    Write it as an engaging article that would be suitable for a tech blog audience.
+    Design the system architecture for the {project_type} project based on the requirements analysis.
+    Choose appropriate technology stack, design patterns, and system components. Consider scalability,
+    security, maintainability, and performance. Create detailed technical specifications.
   expected_output: >
-    A comprehensive 4-paragraph article about the latest AI LLM advancements formatted as markdown.
-    Include an engaging title, introduction, main findings, and conclusion.
-  agent: reporting_analyst
+    A detailed system architecture document including:
+    - Technology stack recommendation (frontend, backend, database, hosting)
+    - System architecture diagram and component breakdown
+    - Database schema design
+    - API design and endpoints specification
+    - Security considerations and implementation strategy
+    - Deployment and scaling strategy
+  agent: software_architect
+
+backend_implementation:
+  description: >
+    Design and document the complete backend implementation based on the system architecture. Create detailed 
+    specifications for a Node.js/Express backend with TypeScript. Include server setup, API endpoints, 
+    database models, middleware, and business logic. Provide complete code examples and implementation details.
+  expected_output: >
+    Complete backend implementation documentation including:
+    - Project structure and package.json configuration
+    - TypeScript setup and build configuration
+    - Express server implementation with middleware
+    - Database models and schemas (PostgreSQL)
+    - RESTful API endpoints (/api/auth, /api/projects, /api/tasks)
+    - WebSocket server for real-time collaboration  
+    - JWT authentication middleware implementation
+    - Input validation and error handling
+    - Environment configuration and setup instructions
+    Provide actual code examples for each component.
+  agent: backend_developer
+
+frontend_implementation:
+  description: >
+    Design and document the complete frontend implementation based on the system architecture and backend API. 
+    Create detailed specifications for a React application with TypeScript. Include component architecture, 
+    routing, state management, API integration, and real-time features. Provide complete code examples.
+  expected_output: >
+    Complete frontend implementation documentation including:
+    - Project structure and package.json configuration
+    - TypeScript and build configuration
+    - React component architecture with routing (React Router)
+    - Authentication components (Login, Register, ProtectedRoute)
+    - Main application components (Dashboard, ProjectList, TaskBoard)
+    - Custom hooks for API integration
+    - WebSocket integration for real-time updates
+    - State management implementation (Context API)
+    - Responsive styling and UI components
+    - Form validation and error handling
+    Provide actual code examples for each component.
+  agent: frontend_developer
+
+quality_assurance:
+  description: >
+    Create comprehensive testing strategy and implement automated tests for the application.
+    Review code quality, identify potential bugs, and ensure the application meets all requirements.
+    Create test plans for manual testing and implement automated test suites.
+  expected_output: >
+    Comprehensive testing documentation and implementation including:
+    - Test strategy and test plan document
+    - Unit tests for backend and frontend components
+    - Integration tests for API endpoints
+    - End-to-end test scenarios
+    - Code quality review and recommendations
+    - Bug report template and testing checklist
+    - Performance testing considerations
+  agent: qa_engineer
+
+deployment_setup:
+  description: >
+    Set up deployment pipeline and infrastructure for the application. Create CI/CD workflows,
+    containerization setup, and deployment configurations. Ensure monitoring, logging, and
+    security best practices are implemented.
+  expected_output: >
+    Complete deployment setup including:
+    - Containerization with Docker files
+    - CI/CD pipeline configuration (GitHub Actions or similar)
+    - Environment setup (development, staging, production)
+    - Deployment instructions and scripts
+    - Monitoring and logging setup
+    - Security configurations and best practices
+    - Backup and disaster recovery procedures
+  agent: devops_engineer
