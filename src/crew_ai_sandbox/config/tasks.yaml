@@ -1,0 +1,17 @@
+research_task:
+  description: >
+    Conduct a comprehensive analysis of the latest advancements in AI Large Language Models (LLMs) in 2024.
+    Focus on breakthrough technologies, new model architectures, performance improvements, and industry applications.
+  expected_output: >
+    A detailed list of 10 key findings about recent AI LLM advancements, including specific models, 
+    companies, and technological breakthroughs.
+  agent: researcher
+
+reporting_task:
+  description: >
+    Using the research findings, create a comprehensive report about the latest AI LLM advancements.
+    Write it as an engaging article that would be suitable for a tech blog audience.
+  expected_output: >
+    A comprehensive 4-paragraph article about the latest AI LLM advancements formatted as markdown.
+    Include an engaging title, introduction, main findings, and conclusion.
+  agent: reporting_analyst
